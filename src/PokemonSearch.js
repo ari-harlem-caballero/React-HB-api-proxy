@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import PokemonList from './PokemonList';
+import Spinner from './Spinner';
 
 export default function PokemonSearch() {
       // you'll need to track your pokemon search results, the loading state, and one form field: name. For this form field, set a real initial values (like 'pikachu') so the form populates with a default value.
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('pikachu');
   const [loading, setLoading] = useState(false);
-  const [pokename, setPokename] = useState('pikachu');
+  const [pokemonName, setPokemonName] = useState([]);
   
   async function handlePokemonSubmit(e) {
     e.preventDefault();
@@ -12,13 +14,13 @@ export default function PokemonSearch() {
         // set the loading state to true
     setLoading(true);
         // use fetch to make a request to your netlify pokemon function. Be sure to pass the pokemon name as a query param in the URL
-    const response = await fetch(`/.netlify/functions/pokemon?search=${pokename}`);
+    const response = await fetch(`/.netlify/functions/pokemon?search=${search}`);
         // put the jsonified data in state and set the loading state to false
     const json = await response.json();
 
-    setPokename(json);
+    setPokemonName(json.results);
 
-    loading(true);
+    setLoading(true);
   }
       
   return (
@@ -33,12 +35,11 @@ export default function PokemonSearch() {
         <button>Get pokemon</button>
       </form>
       {/* Make a PokemonList component to import and use here. Use a ternery to display a loading spinner (make a <Spinner /> component for this) if the data is still loading. */}
-      <div>
-        {pokename.map((pokemon, i) => <div className='pokemon-info' key={pokemon.pokemon + i}>
-          <p>{pokemon.pokemon}</p>
-          <img src={pokemon.url_image} />
-        </div>)}
-      </div>
+      {
+        loading
+          ? <Spinner />
+          : <PokemonList pokemonName={pokemonName} />
+      }
     </section>
   );
 
