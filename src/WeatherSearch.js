@@ -21,7 +21,7 @@ export default function WeatherSearch() {
   
         // put the jsonified data in state and set the loading state to false
     const json = await response.json();
-    console.log(json.daily);
+
     setWeatherSearch(json.daily);
 
     setLoading(false);
