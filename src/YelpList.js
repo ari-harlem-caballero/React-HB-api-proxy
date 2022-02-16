@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function YelpList({ businessResult }) {
   return (
-    <div>
+    <div className='yelp'>
       {
         businessResult.map((business, i) => 
           <div key={business + i} className='yelp-div'>

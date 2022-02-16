@@ -80,7 +80,7 @@ label {
   width: 150px;
 }
 
-.yelp-div {
+.yelp-div, .weather-item {
   margin-top: 15px;
   border: 2px solid black;
   padding: 5px;
@@ -104,4 +104,13 @@ h3 {
 
 .yelp-price p {
   margin: 0px;
+}
+
+.weather-item p {
+  margin: 5px;
+}
+
+h4 {
+  text-transform: capitalize;
+  margin: 15px;
 }

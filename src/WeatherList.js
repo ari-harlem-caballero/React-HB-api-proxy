@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function WeatherList({ weatherSearch }) {
   return (
-    <div>
+    <div className='weather'>
       {
         weatherSearch.map((weatherItem, i) => 
           <div className='weather-item' 
@@ -13,7 +13,7 @@ export default function WeatherList({ weatherSearch }) {
               <p>Temp: {weatherItem.temp.day}</p>
               <p>Feels like: {weatherItem.feels_like.day}</p>
             </div>
-            <h5>{weatherItem.weather[0].description}</h5>
+            <h4>{weatherItem.weather[0].description}</h4>
           </div>)
       }
     </div>
