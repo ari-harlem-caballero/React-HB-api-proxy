@@ -1,14 +1,20 @@
 import { useState } from 'react';
+import YelpList from './YelpList';
+import FoodSpinner from './FoodSpinner';
 
 export default function YelpSearch() {
     // you'll need to track your yelp search results, the loading state, and a form field for location with a default value.
+  const [loading, setLoading] = useState(false);
+  const [yelpSearch, setYelpSearch] = useState([]);
+  const [businesses, setBusinesses] = useState('portland or');
 
   async function handleYelpSubmit(e) {
     e.preventDefault();
   
     // set the loading state to true
+    setLoading(true);
     // use fetch to make a request to your netlify yelp function. Be sure to pass the search query as a query param in the URL
-  
+    const response = await fetch(`/.netlify/functions/yelp?location=${yelpSearch}`);
     // put the jsonified data in state and set the loading state to false
   }
   
