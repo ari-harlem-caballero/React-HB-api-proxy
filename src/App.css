@@ -72,8 +72,12 @@ label {
   display: block;
 }
 
+.spinner img {
+  width: 200px;
+}
+
 .pokemon-info img {
-  width: 100px;
+  width: 150px;
 }
 
 .yelp-div {
