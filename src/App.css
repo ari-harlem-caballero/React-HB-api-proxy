@@ -75,3 +75,29 @@ label {
 .pokemon-info img {
   width: 100px;
 }
+
+.yelp-div {
+  margin-top: 15px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+h3 {
+  margin: 5px;
+}
+
+.yelp-div img {
+  width: 100px;
+}
+
+.yelp-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+}
+
+.yelp-price p {
+  margin: 0px;
+}
