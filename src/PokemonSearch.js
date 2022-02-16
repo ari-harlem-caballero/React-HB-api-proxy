@@ -20,7 +20,7 @@ export default function PokemonSearch() {
 
     setPokemonName(json.results);
 
-    setLoading(true);
+    setLoading(false);
   }
       
   return (
