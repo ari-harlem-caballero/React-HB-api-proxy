@@ -78,7 +78,7 @@ label {
 
 .yelp-div {
   margin-top: 15px;
-  border: 1px solid black;
+  border: 2px solid black;
   padding: 5px;
 }
 
@@ -87,7 +87,7 @@ h3 {
 }
 
 .yelp-div img {
-  width: 100px;
+  width: 150px;
 }
 
 .yelp-price {

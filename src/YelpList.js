@@ -9,7 +9,7 @@ export default function YelpList({ businessResult }) {
             <h3>{business.name}</h3>
             <div className='yelp-price'>
               <p>{business.price}</p>
-              <p>{business.rating}</p>
+              <p>Rating: {business.rating}</p>
             </div>
             <img src={business.image_url}/>
           </div>)
