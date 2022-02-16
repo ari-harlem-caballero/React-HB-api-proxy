@@ -72,11 +72,15 @@ label {
   display: block;
 }
 
-.pokemon-info img {
-  width: 100px;
+.spinner img {
+  width: 200px;
 }
 
-.yelp-div {
+.pokemon-info img {
+  width: 150px;
+}
+
+.yelp-div, .weather-item {
   margin-top: 15px;
   border: 2px solid black;
   padding: 5px;
@@ -100,4 +104,13 @@ h3 {
 
 .yelp-price p {
   margin: 0px;
+}
+
+.weather-item p {
+  margin: 5px;
+}
+
+h4 {
+  text-transform: capitalize;
+  margin: 15px;
 }
